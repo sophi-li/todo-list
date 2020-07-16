@@ -1,0 +1,21 @@
+.container {
+  background-color: #ee5b56;
+  padding-bottom: 3rem;
+  height: 90%;
+}
+
+.addBtn {
+  background-color: #da534f;
+  border: 1px dashed #e48182;
+  border-radius: 9px;
+  color: #ffffff;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+}

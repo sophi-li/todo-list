@@ -1,0 +1,135 @@
+.container {
+  background-color: #ffffff;
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+}
+
+.taskContainer {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 0.5rem;
+}
+
+.task {
+  flex: 2;
+}
+
+.editbtn {
+  color: #555555;
+  /* border: 1px solid #dfdfdf; */
+  border: none;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  padding: 0.3rem 0.7rem;
+  /* padding: 0.2rem 0.6rem; */
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.editbtn:hover {
+  cursor: pointer;
+}
+
+.notes {
+  color: #605514;
+  background-color: #fcf8de;
+  margin-left: 1.7rem;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* EDIT STUFF */
+
+.editContainer {
+  background-color: #ffffff;
+  margin: 1rem 0 0 0;
+  padding: 1rem 1.2rem;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.editTaskInput {
+  flex: 2;
+  margin-left: 1.3rem;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 6px;
+  border: none;
+  /* border: 1px solid gray; */
+}
+
+.editNotesInput {
+  color: #222;
+  background-color: #efefef;
+  margin-left: 1.3rem;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.95rem;
+  border: none;
+  /* border: 1px solid gray; */
+  /* width: 90%; */
+  /* flex: 2; */
+}
+
+.btnContainer {
+  display: flex;
+  background-color: #efefef;
+  padding: 1rem 1.2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+}
+
+.cancelSaveBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 2;
+}
+
+.deleteBtn {
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #939393;
+  margin: 0.2rem 1.5rem 0.2rem 1.3rem;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+}
+
+.deleteBtn:focus {
+  outline: none;
+}
+
+.cancelBtn {
+  margin: 0.5rem 1.5rem 0.5rem 1rem;
+  border: none;
+  padding: 0;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+.cancelBtn:hover,
+.saveBtn:hover {
+  cursor: pointer;
+}
+
+.saveBtn {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #b2b2b2;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+}

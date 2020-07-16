@@ -1,0 +1,29 @@
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Desktop Responsiveness */
+@media only screen and (min-width: 500px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+}

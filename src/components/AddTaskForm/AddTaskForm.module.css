@@ -1,0 +1,79 @@
+.container {
+  margin-top: 1rem;
+}
+
+.inputContainer {
+  background-color: #ffffff;
+  margin: 1rem 0 0 0;
+  padding: 1rem 1.2rem 1.7rem 1.2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.taskInput,
+.notesInput {
+  display: block;
+}
+
+.taskInput {
+  background-color: transparent;
+  border: none;
+  color: #a5a5a5;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.taskInput:focus,
+.notesInput:focus {
+  outline: none;
+}
+
+.notesInput {
+  background-color: #efefef;
+  color: #a5a5a5;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  border-radius: 6px;
+  border: none;
+  width: 98.5%;
+}
+
+.btnContainer {
+  background-color: #efefef;
+  padding: 0.8rem 1.2rem 0.7rem 1.2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cancelBtn,
+.saveBtn {
+  /* padding: 0.5rem 1rem; */
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+}
+
+.cancelBtn:hover,
+.saveBtn:hover {
+  cursor: pointer;
+}
+
+.cancelBtn:focus,
+.saveBtn:focus {
+  outline: none;
+}
+
+.cancelBtn {
+  margin: 0.5rem 1.5rem 0.5rem 1rem;
+  color: #9b9b9b;
+}
+
+.saveBtn {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #b2b2b2;
+}
