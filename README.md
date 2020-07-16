@@ -8,7 +8,7 @@
 
 > A task list, built with React.
 
-Live site:
+Live site: https://yet-another-task-list.netlify.app/
 
 ## Install
 
