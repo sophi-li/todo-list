@@ -1,4 +1,4 @@
-<h1 align="center">Task List</h1>
+<h1 align="center">TomaTracker</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/sophia_wyl">
@@ -6,9 +6,15 @@
   </a>
 </p>
 
-> A task list, built with React.
+> TomaTimer is productivity tool based off the [pomodoro method](https://en.wikipedia.org/wiki/Pomodoro_Technique), with a task list integration.
 
 Live site: https://yet-another-task-list.netlify.app/
+
+![screenshot of tracker with 25 minutes reamining](screenshot.png)
+
+## Tech
+
+Built with React.
 
 ## Install
 
