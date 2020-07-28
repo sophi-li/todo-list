@@ -8,10 +8,12 @@ import styles from './TodoContainer.module.css'
 const TodoContainer = () => {
   const [addTaskFormisActive, setAddTaskFormisActive] = useState(false)
 
-  const [tasklist, setTaskList] = useState([
-    { id: 1, task: 'tomatimer', notes: 'noteeee' },
-    { id: 2, task: 'task list', notes: 'noteeee' },
-  ])
+  // let testTasks = [
+  //   { id: 1, task: 'tomatimer', notes: 'noteeee' },
+  //   { id: 2, task: 'task list', notes: 'noteeee' },
+  // ]
+
+  const [tasklist, setTaskList] = useState([])
 
   function handleAddTask(e) {
     e.preventDefault()
