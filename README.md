@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> TomaTimer is productivity tool based off the [pomodoro method](https://en.wikipedia.org/wiki/Pomodoro_Technique), with a task list integration.
+> TomaTracker is productivity tool based off the [pomodoro method](https://en.wikipedia.org/wiki/Pomodoro_Technique), with a built in task list integration.
 
 Live site: https://tomatracker.netlify.app
 
