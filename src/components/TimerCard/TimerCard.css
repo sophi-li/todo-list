@@ -1,0 +1,70 @@
+.timerCardContainer {
+  background-color: #ee6766;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 3rem auto;
+  border-radius: 15px;
+  padding: 2rem 0rem 2.5rem 0.5rem;
+}
+
+.time {
+  font-size: 8rem;
+  font-weight: bold;
+  padding: 0.7rem 0;
+}
+
+.tomatimerBtn,
+.shortBreakBtn,
+.longBreakBtn {
+  color: white;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.tomatimerBtn:hover,
+.shortBreakBtn:hover,
+.longBreakBtn:hover {
+  cursor: pointer;
+  background-color: #cb5756;
+  border-radius: 10px;
+}
+
+.tomatimerBtn:focus,
+.shortBreakBtn:focus,
+.longBreakBtn:focus {
+  outline: none;
+}
+
+.tomatimerBtn,
+.shortBreakBtn {
+  margin-right: 0.5rem;
+}
+
+.activeBtn {
+  background-color: #cb5756;
+  border-radius: 10px;
+}
+
+.startBtn {
+  color: #ee5b56;
+  background-color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 0.7em 2em 0.5em 2em;
+  font-weight: bold;
+  border-bottom: 7px solid #ebebeb;
+}
+
+.startBtn:hover {
+  cursor: pointer;
+}
+
+.startBtn:focus {
+  outline: none;
+}

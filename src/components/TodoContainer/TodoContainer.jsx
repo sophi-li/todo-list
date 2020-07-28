@@ -36,6 +36,8 @@ const TodoContainer = () => {
   return (
     <div>
       <div className={styles.container}>
+        <h2 className={styles.taskListTitle}>Task List</h2>
+
         {tasklist.map((element) => (
           <TodoCard
             key={element.id}
