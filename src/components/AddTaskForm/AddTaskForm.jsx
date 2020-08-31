@@ -19,7 +19,6 @@ const AddTaskForm = ({ addTodo }) => {
     e.preventDefault()
     if (!tasklist.task) return
     addTodo(tasklist)
-    console.log('tasklist from addtask handlesubmit', tasklist)
     setTasklist({ id: null, task: '', notes: '', completed: '' })
   }
 
