@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
-import styles from './TodoCard.module.css'
+import './TodoCard.css'
 
-const TodoCard = ({ tasklist, updateTodo, deleteTodo }) => {
+const TodoCard = ({ tasklist, updateTodo, deleteTodo, completeTodo }) => {
   const [editFormisActive, setEditFormisActive] = useState(false)
   const [currentTodo, setCurrentTodo] = useState({
     id: null,
     task: '',
     notes: '',
+    completed: '',
   })
   const [todo, setTodo] = useState(currentTodo)
 
@@ -18,6 +19,7 @@ const TodoCard = ({ tasklist, updateTodo, deleteTodo }) => {
       id: tasklist.id,
       task: tasklist.task,
       notes: tasklist.notes,
+      completed: tasklist.completed,
     })
   }
 
@@ -36,61 +38,76 @@ const TodoCard = ({ tasklist, updateTodo, deleteTodo }) => {
     setEditFormisActive(false)
   }
 
+  // function handleCheckboxClick(e) {
+  //   completeTodo(tasklist.id)
+  // }
+
   return (
     <div>
       {editFormisActive ? (
         <div>
-          <div className={styles.editContainer}>
-            <div className={styles.taskContainer}>
+          <div className="editContainer">
+            <div className="taskContainer">
               <input
-                className={styles.editTaskInput}
+                className="editTaskInput"
                 name="task"
                 value={todo.task}
                 onChange={handleInputChange}
               ></input>
             </div>
             <input
-              className={styles.editNotesInput}
+              className="editNotesInput"
               name="notes"
               value={todo.notes}
               onChange={handleInputChange}
             ></input>
           </div>
-          <div className={styles.btnContainer}>
+          <div className="btnContainer">
             <button
-              className={styles.deleteBtn}
+              className="deleteBtn"
               onClick={() => deleteTodo(tasklist.id)}
             >
               Delete
             </button>
-            <div className={styles.cancelSaveBtnContainer}>
+            <div className="cancelSaveBtnContainer">
               <button
-                className={styles.cancelBtn}
+                className="cancelBtn"
                 onClick={() => setEditFormisActive(false)}
               >
                 Cancel
               </button>
-              <button onClick={handleSaveEdits} className={styles.saveBtn}>
+              <button onClick={handleSaveEdits} className="saveBtn">
                 Save
               </button>
             </div>
           </div>
         </div>
       ) : (
-        <div className={styles.container}>
-          <div className={styles.taskContainer}>
-            <div className={styles.checkbox}>
+        <div
+          className={
+            `parentContainer`
+            // ${tasklist.completeTodo === true ? 'completedTask' : null}`
+          }
+        >
+          {/* <div> */}
+          <div className="taskContainer">
+            <div className="checkbox">
               <label htmlFor="task">
-                <input type="checkbox" id="task" name="task" />
+                {/* <input
+                  type="checkbox"
+                  id="task"
+                  name="task"
+                  onClick={handleCheckboxClick}
+                /> */}
               </label>
             </div>
-            <div className={styles.task}>{tasklist.task}</div>
-            <button onClick={handleEditClick} className={styles.editbtn}>
+            <div className="task">{tasklist.task}</div>
+            <button onClick={handleEditClick} className="editbtn">
               edit
             </button>
           </div>
           {tasklist.notes ? (
-            <div className={styles.notes}>{tasklist.notes}</div>
+            <div className="notes">{tasklist.notes}</div>
           ) : null}
         </div>
       )}

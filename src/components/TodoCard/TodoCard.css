@@ -1,7 +1,7 @@
-.container {
+.parentContainer {
   background-color: #ffffff;
   margin: 1rem 0;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.5rem 1rem 0rem;
   border-radius: 10px;
 }
 
@@ -11,24 +11,29 @@
   align-items: center;
 }
 
-.checkbox {
+/* .checkbox {
   margin-right: 0.5rem;
-}
+} */
+
+/* .completedTask {
+  text-decoration: line-through;
+  background-color: blue;
+} */
 
 .task {
   flex: 2;
+  margin-left: 1.7rem;
 }
 
 .editbtn {
   color: #555555;
-  /* border: 1px solid #dfdfdf; */
   border: none;
   border-radius: 5px;
   background-color: #eeeeee;
   padding: 0.3rem 0.7rem;
-  /* padding: 0.2rem 0.6rem; */
   font-weight: bold;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 
 .editbtn:hover {
@@ -44,7 +49,7 @@
   font-size: 0.95rem;
 }
 
-/* EDIT STUFF */
+/* EDIT TODO STATE */
 
 .editContainer {
   background-color: #ffffff;
@@ -63,7 +68,6 @@
   padding: 0.3rem;
   border-radius: 6px;
   border: none;
-  /* border: 1px solid gray; */
 }
 
 .editNotesInput {
@@ -74,9 +78,6 @@
   padding: 0.3rem 0.5rem;
   font-size: 0.95rem;
   border: none;
-  /* border: 1px solid gray; */
-  /* width: 90%; */
-  /* flex: 2; */
 }
 
 .btnContainer {

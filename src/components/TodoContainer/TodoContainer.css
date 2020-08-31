@@ -27,3 +27,8 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+.completedTask {
+  text-decoration: line-through;
+  background-color: lightblue;
+}

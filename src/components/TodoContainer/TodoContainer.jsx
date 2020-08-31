@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import TodoCard from '../TodoCard'
 import AddTaskForm from '../AddTaskForm'
 
-import styles from './TodoContainer.module.css'
+import './TodoContainer.css'
 
 const TodoContainer = () => {
   const [addTaskFormisActive, setAddTaskFormisActive] = useState(false)
@@ -22,6 +22,7 @@ const TodoContainer = () => {
 
   function addTodo(text) {
     text.id = tasklist.length + 1
+    text.completed = false
     const newTodos = [...tasklist, text]
     setTaskList(newTodos)
     setAddTaskFormisActive(false)
@@ -35,23 +36,36 @@ const TodoContainer = () => {
     setTaskList(tasklist.map((elem) => (elem.id === id ? updatedTodo : elem)))
   }
 
+  // function completeTodo(id) {
+  //   tasklist.map((elem) =>
+  //     elem.id === id ? (elem.completed = !elem.completed) : elem
+  //   )
+  //   setTaskList(tasklist)
+  // }
+
   return (
     <div>
-      <div className={styles.container}>
-        <h2 className={styles.taskListTitle}>Task List</h2>
+      <div className="container">
+        <h2 className="taskListTitle">Task List</h2>
 
         {tasklist.map((element) => (
-          <TodoCard
+          <div
             key={element.id}
-            tasklist={element}
-            deleteTodo={deleteTodo}
-            updateTodo={updateTodo}
-          />
+            // className={`${element.completed === true ? 'completedTask' : null}`}
+          >
+            <TodoCard
+              key={element.id}
+              tasklist={element}
+              deleteTodo={deleteTodo}
+              updateTodo={updateTodo}
+              // completeTodo={completeTodo}
+            />
+          </div>
         ))}
 
         {addTaskFormisActive && <AddTaskForm addTodo={addTodo} />}
 
-        <button onClick={handleAddTask} className={styles.addBtn}>
+        <button onClick={handleAddTask} className="addBtn">
           + Add task
         </button>
       </div>

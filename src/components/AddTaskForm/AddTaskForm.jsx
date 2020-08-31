@@ -3,7 +3,12 @@ import React, { useState } from 'react'
 import styles from './AddTaskForm.module.css'
 
 const AddTaskForm = ({ addTodo }) => {
-  const [tasklist, setTasklist] = useState({ id: null, task: '', notes: '' })
+  const [tasklist, setTasklist] = useState({
+    id: null,
+    task: '',
+    notes: '',
+    completed: '',
+  })
 
   function handleInputChange(e) {
     const { name, value } = e.target
@@ -14,7 +19,8 @@ const AddTaskForm = ({ addTodo }) => {
     e.preventDefault()
     if (!tasklist.task) return
     addTodo(tasklist)
-    setTasklist({ id: null, task: '', notes: '' })
+    console.log('tasklist from addtask handlesubmit', tasklist)
+    setTasklist({ id: null, task: '', notes: '', completed: '' })
   }
 
   return (
