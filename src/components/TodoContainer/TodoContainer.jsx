@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import TodoCard from '../TodoCard'
 import AddTaskForm from '../AddTaskForm'
@@ -13,7 +13,15 @@ const TodoContainer = () => {
   //   { id: 2, task: 'task list', notes: 'noteeee' },
   // ]
 
-  const [tasklist, setTaskList] = useState([])
+  // Get tasks from local storage
+  const [tasklist, setTaskList] = useState(() => {
+    const localData = localStorage.getItem('todos')
+    return localData ? JSON.parse(localData) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(tasklist))
+  }, [tasklist])
 
   function handleAddTask(e) {
     e.preventDefault()
@@ -48,20 +56,21 @@ const TodoContainer = () => {
       <div className="container">
         <h2 className="taskListTitle">Task List</h2>
 
-        {tasklist.map((element) => (
-          <div
-            key={element.id}
-            // className={`${element.completed === true ? 'completedTask' : null}`}
-          >
-            <TodoCard
+        {tasklist.task !== '' &&
+          tasklist.map((element) => (
+            <div
               key={element.id}
-              tasklist={element}
-              deleteTodo={deleteTodo}
-              updateTodo={updateTodo}
-              // completeTodo={completeTodo}
-            />
-          </div>
-        ))}
+              // className={`${element.completed === true ? 'completedTask' : null}`}
+            >
+              <TodoCard
+                key={element.id}
+                tasklist={element}
+                deleteTodo={deleteTodo}
+                updateTodo={updateTodo}
+                // completeTodo={completeTodo}
+              />
+            </div>
+          ))}
 
         {addTaskFormisActive && <AddTaskForm addTodo={addTodo} />}
 
